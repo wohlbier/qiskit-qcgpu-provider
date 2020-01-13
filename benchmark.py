@@ -82,7 +82,9 @@ def benchmark(samples, qubits, out, single, burn):
     burn_count = 5 if burn else 0
 
     if single:
-        functions = bench_qcgpu, bench_qiskit
+        # disable bench_qiskit
+        #functions = bench_qcgpu, bench_qiskit
+        functions = bench_qcgpu, bench_qcgpu
         times = {f.__name__: [] for f in functions}
 
         names = []
@@ -113,7 +115,9 @@ def benchmark(samples, qubits, out, single, burn):
 
         return
 
-    functions = bench_qcgpu, bench_qiskit
+    # disable bench_qiskit
+    #functions = bench_qcgpu, bench_qiskit
+    functions = bench_qcgpu, bench_qcgpu
 
     writer = create_csv(out)
 

@@ -1,0 +1,4 @@
+# changed script to not use bench_qiskit, only bench_qcgpu
+# then can use samples 1 to see roughly how long it will take.
+
+python3 benchmark.py --samples 1 --qubits 30
