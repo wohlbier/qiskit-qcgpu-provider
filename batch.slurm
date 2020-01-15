@@ -11,4 +11,6 @@ module load singularity/3.5.0
 WORK=$SCRATCH/qiskit-qcgpu-provider
 cd $WORK
 rm -f benchmark_data.csv
+date
 singularity exec --nv $SCRATCH/qiskit.sif $WORK/run.sh
+date
